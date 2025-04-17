@@ -42,7 +42,7 @@ class _HomeState extends State<Home> {
         Scaffold(
           extendBody: true,
           bottomNavigationBar: Container(
-            height: 80,
+            height: 100,
             decoration: const BoxDecoration(boxShadow: [
               BoxShadow(
                 color: Colors.black,
@@ -61,12 +61,16 @@ class _HomeState extends State<Home> {
                 selectedItemColor: GlobalColors.mainColor,
                 unselectedItemColor: Colors.grey,
                 currentIndex: myCurrentIndex,
+                type: BottomNavigationBarType.fixed,
+                elevation: 8,
+                iconSize: 20,
+                selectedFontSize: 11,
+                unselectedFontSize: 10,
                 unselectedLabelStyle: GoogleFonts.lato(
                   fontWeight: FontWeight.w400,
                 ),
                 selectedLabelStyle: GoogleFonts.lato(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w500,
                 ),
                 onTap: (index) {
                   setState(() {
@@ -75,32 +79,42 @@ class _HomeState extends State<Home> {
                 },
                 items: [
                   BottomNavigationBarItem(
-                    icon: Image.asset(
-                      'assets/icon/icon_home.png',
-                      scale: 2,
-                      color: myCurrentIndex == 0
-                          ? GlobalColors.mainColor
-                          : Colors.grey,
+                    icon: Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 5), // Menambah gap di sini
+                      child: Image.asset(
+                        'assets/icon/icon_home.png',
+                        scale: 2,
+                        color: myCurrentIndex == 0
+                            ? GlobalColors.mainColor
+                            : Colors.grey,
+                      ),
                     ),
                     label: 'Beranda',
                   ),
                   BottomNavigationBarItem(
-                    icon: Image.asset(
-                      'assets/icon/icon_travel.png',
-                      scale: 2,
-                      color: myCurrentIndex == 1
-                          ? GlobalColors.mainColor
-                          : Colors.grey,
+                    icon: Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: Image.asset(
+                        'assets/icon/icon_travel.png',
+                        scale: 2,
+                        color: myCurrentIndex == 1
+                            ? GlobalColors.mainColor
+                            : Colors.grey,
+                      ),
                     ),
                     label: 'Riwayat',
                   ),
                   BottomNavigationBarItem(
-                    icon: Image.asset(
-                      'assets/icon/icon_profile.png',
-                      scale: 2,
-                      color: myCurrentIndex == 2
-                          ? GlobalColors.mainColor
-                          : Colors.grey,
+                    icon: Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: Image.asset(
+                        'assets/icon/icon_profile.png',
+                        scale: 2,
+                        color: myCurrentIndex == 2
+                            ? GlobalColors.mainColor
+                            : Colors.grey,
+                      ),
                     ),
                     label: 'Profil',
                   ),

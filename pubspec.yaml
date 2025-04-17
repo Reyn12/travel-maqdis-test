@@ -65,7 +65,7 @@ dependencies:
   # firebase_core: ^2.27.0
   sign_in_button: ^3.2.0
   google_sign_in: ^6.2.1
-  connectivity_plus: ^6.0.3
+  connectivity_plus: ^5.0.2
   flutter_cache_manager: ^3.3.1
   dots_indicator: ^3.0.0
   device_info_plus: ^10.1.0
@@ -117,6 +117,7 @@ flutter:
     - assets/icon/
     - assets/cards/
     - json/
+    - .env
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

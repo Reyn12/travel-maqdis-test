@@ -1,0 +1,103 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+android {
+    namespace "com.travel.maqdis"
+    // compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 34
+    ndkVersion "26.1.10909125"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.travel.maqdis"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
+        multiDexEnabled true
+        minSdkVersion 24
+        targetSdkVersion 34
+        versionCode 2
+        versionName "1.0.0"
+        manifestPlaceholders["googleClientId"] = GOOGLE_CLIENT_ID
+    }
+
+    signingConfigs {
+        // hapus debug jika ingin menggunakan keystore debug default non release
+        debug {
+            storeFile file(keystoreProperties.getProperty("storeFile"))
+            storePassword keystoreProperties.getProperty("storePassword")
+            keyAlias keystoreProperties.getProperty("keyAlias")
+            keyPassword keystoreProperties.getProperty("keyPassword")
+        }
+
+        release {
+            storeFile file(keystoreProperties.getProperty("storeFile"))
+            storePassword keystoreProperties.getProperty("storePassword")
+            keyAlias keystoreProperties.getProperty("keyAlias")
+            keyPassword keystoreProperties.getProperty("keyPassword")
+        }
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            // signingConfig signingConfigs.debug // ganti ke release
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0' // tambah ini untuk google auth
+}

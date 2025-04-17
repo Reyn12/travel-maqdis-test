@@ -1,0 +1,4 @@
+enum DeleteAccountStep {
+  reason,
+  otpCode,
+}

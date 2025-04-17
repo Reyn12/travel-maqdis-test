@@ -1,0 +1,36 @@
+[
+    {
+        "id_praktek": 1,
+        "judul_praktek": "Doa untuk orang yang ditinggalkan",
+        "audio": "1_.mp3",
+        "ayat": [
+            {
+                "ayats": "اِنَّآ اَعْطَيْنٰكَ الْكَوْثَرَۗ",
+                "terjemah": "Sesungguhnya Kami telah memberimu (Nabi Muhammad) nikmat yang banyak."
+            },
+            {
+                "ayats": "فَصَلِّ لِرَبِّكَ وَانْحَرْۗ",
+                "terjemah": "Maka, laksanakanlah salat karena Tuhanmu dan berkurbanlah!"
+            },
+            {
+                "ayats": " ࣖاِنَّ شَانِئَكَ هُوَ الْاَبْتَرُ",
+                "terjemah": "Sesungguhnya orang yang membencimu, dialah yang terputus (dari rahmat Allah)."
+            }
+        ]
+    },
+    {
+        "id_praktek": 2,
+        "judul_praktek": "Doa untuk orang yang akan meninggalkan",
+        "audio": "2_.mp3",
+        "ayat": [
+            {
+                "ayats": "يٰٓاَيَّتُهَا النَّفْسُ الْمُطْمَىِٕنَّةُۙ",
+                "terjemah": "Wahai jiwa yang tenang,"
+            },
+            {
+                "ayats": " ۚ ارْجِعِيْٓ اِلٰى رَبِّكِ رَاضِيَةً مَّرْضِيَّةً",
+                "terjemah": "kembalilah kepada Tuhanmu dengan rida dan diridai."
+            }
+        ]
+    }
+]

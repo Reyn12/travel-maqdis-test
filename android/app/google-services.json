@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "70358305534",
+    "project_id": "apptravelmaqdis",
+    "storage_bucket": "apptravelmaqdis.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70358305534:android:d6b7a9645dbd74237fb3af",
+        "android_client_info": {
+          "package_name": "com.travel.maqdis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70358305534-ieaohocv14a7rvlrhjjefcv4bqoetp08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.travel.maqdis",
+            "certificate_hash": "32365a616d612474facdc6fa7fcc31bb5c0b6910"
+          }
+        },
+        {
+          "client_id": "70358305534-e30vdcvgpdpdojcvqqlfsd99ojo390mr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC65uzrsFzfrsNpfN3SVTb3zQB0cp67GZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70358305534-e30vdcvgpdpdojcvqqlfsd99ojo390mr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "70358305534-1kfpgo5ahsvhh3dpvk3emgp29d4hika1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.login"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

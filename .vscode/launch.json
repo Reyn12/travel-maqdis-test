@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "app_travel",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "redmi12",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "3326448f7d76"
+        },
+        {
+            "name": "samsung",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "R9RR501R85T"
+        },
+        // {
+        //     "name": "app_travel (profile mode)",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "app_travel (release mode)",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // }
+    ],
+    "compounds": [
+        {
+            "name": "All Devices",
+            "configurations": [
+                "redmi12",
+                "samsung"
+            ],
+        }
+    ]
+}
